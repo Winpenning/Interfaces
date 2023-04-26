@@ -1,25 +1,25 @@
-﻿using System.Globalization;
-
-namespace Interfaces.Entities
+﻿namespace Interfaces.entities
 {
-    internal class Invoice
+    class Invoice
     {
-        public double basicPayment { get; set; }
-        public double tax { get; set; }
+        private double basicPayment;
+        private double tax;
+
         public Invoice(double basicPayment, double tax)
         {
             this.basicPayment = basicPayment;
             this.tax = tax;
         }
-        public double TotalPayment { get { return basicPayment + tax; } }
+        public double totalPayment()
+        {
+            return basicPayment + tax;
+        }
+
         public override string ToString()
         {
-            return "basic payment: " + basicPayment.ToString("F2")
-                + "\nTax: "
-                + tax.ToString("F2")
-                + "\nTotal payment: "
-                + TotalPayment.ToString("F2");
+            return "\nBasic payment: " + basicPayment +
+                   "\nTax: " + tax +
+                   "\nTotal payment: " + totalPayment();
         }
     }
 }
-

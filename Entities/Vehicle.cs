@@ -1,8 +1,8 @@
-﻿namespace Interfaces.Entities
+﻿namespace Interfaces.entities
 {
-    internal class Vehicle
+    class Vehicle
     {
-        public string model { get; set; }
+        private string model;
 
         public Vehicle(string model)
         {

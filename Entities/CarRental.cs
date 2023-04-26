@@ -1,19 +1,14 @@
-﻿namespace Interfaces.Entities
+﻿namespace Interfaces.entities
 {
-    internal class CarRental
+    class CarRental
     {
-        public DateTime start { get; set; }
-        public DateTime finish { get; set; }
-        public Vehicle vehicle { get; set; }
-        public Invoice? invoice { get; set; }
-        public CarRental() { }
+        private DateTime start;
+        private DateTime finish;
 
-        public CarRental(DateTime start, DateTime finish, Vehicle vehicle)
+        public CarRental(DateTime start, DateTime finish)
         {
             this.start = start;
             this.finish = finish;
-            this.vehicle = vehicle;
-            this.invoice = null;
         }
     }
 }
