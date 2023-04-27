@@ -2,7 +2,7 @@
 {
     internal class BrazilTaxService : ITaxService
     {
-        public double Tax(double amount)
+        public double tax(double amount)
         {
             if(amount <= 100)
             {

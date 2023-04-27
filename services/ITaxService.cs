@@ -2,6 +2,6 @@
 {
     interface ITaxService
     {
-        double Tax(double amount);
+        double tax(double amount);
     }
 }
